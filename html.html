@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal Typing Effect</title>
+  <style>
+    body {
+      background: black;
+      color: green;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .terminal {
+      font-size: 1.5rem;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+    .cursor {
+      width: 10px;
+      height: 15px;
+      background: green;
+      margin-left: 5px;
+      animation: blink 0.5s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { background: transparent; }
+      100% { background: green; }
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <span id="text"></span>
+    <div class="cursor"></div>
+  </div>
+  <script>
+    const text = "Welcome to the terminal simulation...";
+    const speed = 100; // Velocidad en ms por letra
+    let i = 0;
+
+    function typeEffect() {
+      const textElement = document.getElementById("text");
+      if (i < text.length) {
+        textElement.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, speed);
+      }
+    }
+
+    typeEffect();
+  </script>
+</body>
+</html>
