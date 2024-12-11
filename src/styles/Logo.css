@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Font-terminal';
+    src: url('font/Glass_TTY_VT220.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.tagline {
+    font-family: 'Font-terminal';
+}
+
+#tagline-first{
+ color:#8f9094
+
+}
+
+#tagline-second{
+    color:#3ccf91
+
+   }
+
+@media (max-width: 7680px) and (max-height: 4320px) and (orientation: landscape){
+    .tagline{
+        font-size: 3vh;
+        padding-top: 30vh;
+        }
+    }
+
+@media (max-width: 1440px) and (max-height: 2560px) and (orientation: portrait){
+    .tagline {
+        font-size: 2vh;
+        padding-top: 30vh;
+        padding-right: 2vh;
+        padding-left: 2vh;
+    } 
+   }

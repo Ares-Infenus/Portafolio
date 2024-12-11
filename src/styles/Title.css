@@ -1,0 +1,23 @@
+.hero-content {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Opcional: Centra el texto en el interior */
+}
+
+
+@media (max-width: 7680px) and (max-height: 4320px) and (orientation: landscape){
+    .title-image {
+        width: 100vh;
+        height: auto;
+        padding-top: 15vh;
+    }
+}
+
+@media (max-width: 1440px) and (max-height: 2560px) and (orientation: portrait){
+    .title-image {
+        width: 40vh;
+        height: auto;
+        padding-top: 20vh;
+    }
+}
