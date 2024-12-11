@@ -1,11 +1,17 @@
+.boton_div{
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+
+
+}
 .boton {
-    top:40%;
-    left: 42%;
     width: 200px;
     height: 50px;
-    margin: 200px auto;
+    margin: 10vh auto; /* Este margen superior e inferior determina la posición vertical */
     display: block;
     position: absolute;
+    padding-top: 0px;
   }
   
   .botontext {
