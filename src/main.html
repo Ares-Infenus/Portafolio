@@ -18,12 +18,14 @@
     <link rel="stylesheet" href="styles/particles.css"> <!-- Particle Animation Styles -->
     <link rel="stylesheet" href="styles/luz.css"> <!-- Sunlight Effect Styles -->
     <link rel="stylesheet" href="styles/effect.css"> <!-- Red World Effect Styles -->
+    <link rel="stylesheet" href="styles/World.css"> <!-- World 3D Styles -->
+    <link rel="stylesheet" href="styles/fragmentacion.css"> <!-- Background Styles -->
 
     <!-- Defer non-critical JavaScript for better loading -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-oXB0a2RhV2g0f+N3UsGkWtCvIJmIzM+BbMfgM4BQI3+Y3wGbPZiqPoFvHyf6MZZC" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="js/particles.js" defer></script>
 </head>
-<body>
+<body  id="contenido" class="fragmentacion">
     <!-- Particle Background -->
     <div id="particles-js" class="Fondo_estrellas">
         <!-- Circular Particle Animation -->
@@ -34,6 +36,9 @@
         </div>
     </div>
 
+    <div class="World_3D">
+      <script src="js/World.js"></script>
+    </div>
     <!-- Hero Content Section -->
     <main class="hero-content">
         <!-- Title Image -->

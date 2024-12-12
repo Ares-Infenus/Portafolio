@@ -1,39 +1,32 @@
-.contenedor_luz{
-    padding-bottom: 3vh;
-
-}
 .luz {
-    width: 10vh; /* Tamaño del círculo */
-    height: 10vh;
-    background-color: rgb(255, 255, 255); /* Color de la luz */
-    border-radius: 50%; /* Hace que sea un círculo */
-    box-shadow: 
-      0 0 2vh rgb(255, 255, 255),   /* Brillo cercano */
-      0 0 4vh #ffffff, /* Brillo medio */
-      0 0 8vh #6d6d6d; /* Brillo lejano */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  width: 23vh; /* Tamaño del círculo */
+  height: 24vh;
+  border-radius: 50%; /* Hace que sea un círculo */
+  box-shadow: 
+    0 0 2vh rgba(0, 183, 255, 0.2),   /* Brillo cercano */
+    0 0 4vh rgba(0, 183, 255, 0), /* Brillo medio */
+    0 0 8vh rgba(0, 183, 255, 0); /* Brillo lejano */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -3;
+  animation: parpadeo 2s infinite;
+}
 
-  @keyframes parpadeo {
-    0%, 100% {
-      box-shadow: 
-        0 0 2vh rgb(255, 255, 255),
-        0 0 4vh #ffffff,
-        0 0 8vh #5f5f5f;
-    }
-    50% {
-      box-shadow: 
-        0 0 1vh rgb(255, 255, 255),
-        0 0 2vh #ffffff,
-        0 0 4vh #9e9e9e;
-    }
-  }
-  
-  .luz {
-    animation: parpadeo 2s infinite;
-  }
-
-  
+/* Fondo translúcido como atmósfera */
+.luz::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vh; /* Tamaño mayor para el efecto de atmósfera */
+  height: 30vh;
+  border-radius: 50%;
+  background: radial-gradient(
+      rgba(0, 183, 255, 0.2) 0%,  /* Color azul translúcido en el centro */
+      rgba(0, 183, 255, 0) 100%   /* Gradiente hacia transparente */
+  );
+  z-index: -4; /* Debajo de la luz */
+}

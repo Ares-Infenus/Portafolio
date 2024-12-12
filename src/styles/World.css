@@ -1,0 +1,10 @@
+.World_3D {
+    position: absolute; /* O fixed si quieres que se mantenga al desplazar la página */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el objeto en el viewport */
+    z-index: -3; /* Eleva el contenedor sobre otros elementos */
+    width: 100vw; /* Ajusta al ancho de la ventana */
+    height: 100vh; /* Ajusta al alto de la ventana */
+    pointer-events: none; /* Opcional: Deja que los clics pasen a través */
+}
