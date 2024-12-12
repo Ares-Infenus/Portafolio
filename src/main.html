@@ -6,62 +6,93 @@
     <meta name="description" content="Portfolio of Sebastiàn D. Pinzòn Zambrano - Data Scientist and Analyst">
     <meta name="keywords" content="data science, portfolio, analytics, Sebastiàn Pinzòn">
     <title>Sebastiàn D. Pinzòn Zambrano | Data Scientist</title>
-    
-    <!-- Preload critical assets -->
+
+    <!-- Preload critical assets for performance -->
     <link rel="preload" href="img/title.png" as="image">
-    
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/Background.css"><!-- Body -->
-    <link rel="stylesheet" href="styles/Title.css"><!-- Image Titule -->
-    <link rel="stylesheet" href="styles/Logo.css"><!-- H2 Subtitle -->
-    <link rel="stylesheet" href="styles/Boton.css"><!-- Css of Boton of link to Portfolio -->
-    <link rel="stylesheet" href="styles/particles.css"><!-- Css of Background particle -->
-    <link rel="stylesheet" href="styles/luz.css"><!-- Css of sunshine -->
-    <link rel="stylesheet" href="styles/effect.css"><!-- Css of effect red of world -->
+    <link rel="stylesheet" href="styles/Background.css"> <!-- Background Styles -->
+    <link rel="stylesheet" href="styles/Title.css"> <!-- Title Image Styles -->
+    <link rel="stylesheet" href="styles/Logo.css"> <!-- Subtitle Styles -->
+    <link rel="stylesheet" href="styles/Boton.css"> <!-- Button Styles -->
+    <link rel="stylesheet" href="styles/particles.css"> <!-- Particle Animation Styles -->
+    <link rel="stylesheet" href="styles/luz.css"> <!-- Sunlight Effect Styles -->
+    <link rel="stylesheet" href="styles/effect.css"> <!-- Red World Effect Styles -->
 
-
-
-    
-    <!-- Defer non-critical JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
-    <script src="js/particles.js"></script>
-
+    <!-- Defer non-critical JavaScript for better loading -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-oXB0a2RhV2g0f+N3UsGkWtCvIJmIzM+BbMfgM4BQI3+Y3wGbPZiqPoFvHyf6MZZC" crossorigin="anonymous" defer></script>
+    <script src="js/particles.js" defer></script>
 </head>
 <body>
+    <!-- Particle Background -->
     <div id="particles-js" class="Fondo_estrellas">
-    <!-- Círculo con partículas -->
-    <div class="circle-container">
-      <div class="circle-mask">
-          <div id="particles-circular"></div>
+        <!-- Circular Particle Animation -->
+        <div class="circle-container">
+            <div class="circle-mask">
+                <div id="particles-circular"></div>
+            </div>
+        </div>
     </div>
 
-  </div>
-    </div>
-    <div class="hero-content">
-      <img src="img/title.png" alt="Sebastiàn D. Pinzòn Zambrano - Data Scientist" class="title-image">
-      <div class="contenedor_luz">
-        <div class="luz"></div>
-        <div id="particles_world" class="Fondo_estrellas"></div>
-      </div>
-      
-      <div class="tagline">
-          <p id="tagline-first">In a data-driven world, we transform numbers into knowledge,</p>
-          <p id="tagline-second">knowledge into decisions and decisions into success.</p>
-      </div>      
-    </div>
-    <div class="boton_div">
-      <a href="#" class="boton">
-        <div class="botontext">View portfolio</div>
-        <div class="botontext">View portfolio</div>
-        <span class="twist" style="width: 53px;"></span>
-        <span class="twist" style="width: 53px;"></span>
-        <span class="twist" style="width: 53px;"></span>
-        <span class="twist" style="width: 53px;"></span>
-      </a>
-    </div>
+    <!-- Hero Content Section -->
+    <main class="hero-content">
+        <!-- Title Image -->
+        <img src="img/title.png" alt="Sebastiàn D. Pinzòn Zambrano - Data Scientist" class="title-image">
+
+        <!-- Sunlight Effect and World Particles -->
+        <section class="contenedor_luz">
+            <div class="luz" aria-hidden="true"></div>
+            <div id="particles_world" class="Fondo_estrellas"></div>
+        </section>
+
+        <!-- Tagline Section -->
+        <section class="tagline">
+            <p id="tagline-first">In a data-driven world, we transform numbers into knowledge,</p>
+            <p id="tagline-second">knowledge into decisions and decisions into success.</p>
+        </section>
+    </main>
+
+    <!-- Portfolio Button Section -->
+    <section class="boton_div">
+        <a href="#portfolio" class="boton" aria-label="View portfolio">
+            <div class="botontext">View portfolio</div>
+            <div class="botontext">View portfolio</div>
+            <span class="twist" style="width: 53px;"></span>
+            <span class="twist" style="width: 53px;"></span>
+            <span class="twist" style="width: 53px;"></span>
+            <span class="twist" style="width: 53px;"></span>
+        </a>
+    </section>
 
     <!-- Scripts -->
-    <script src="js/app.js"></script>
-    <script src="js/app_world.js"></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/app_world.js" defer></script>
 </body>
 </html>
+
+<!-- Documentation -->
+<!--
+File: index.html
+Purpose: Portfolio homepage for Sebastiàn D. Pinzòn Zambrano.
+
+### Key Sections:
+1. Meta Tags: Provide metadata for SEO and responsive design.
+2. Preload: Preloads critical assets (e.g., title image) to improve performance.
+3. Stylesheets: Includes various CSS files for specific sections like background, title, and button styles.
+4. JavaScript: Loads jQuery and particle effects. JavaScript is deferred for better page load times.
+5. Body Content:
+   - Particle Background: Creates a dynamic particle animation.
+   - Hero Content: Displays the title image, tagline, and lighting effects.
+   - Button: Includes a styled button to link to the portfolio.
+
+### Tips for Customization:
+- Replace `img/title.png` with the path to your title image.
+- Update the `href` attribute in the "View portfolio" button with the actual portfolio link.
+- Modify CSS files (e.g., styles/Background.css) for visual changes.
+- Add functionality to `js/app.js` and `js/app_world.js` for interactivity.
+
+### Performance Optimization:
+- Critical assets are preloaded.
+- Non-essential JavaScript is deferred.
+- Keep image sizes optimized for faster loading.
+-->
